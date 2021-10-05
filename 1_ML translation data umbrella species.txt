@@ -1,0 +1,66 @@
+vernacular_name	C&S classification category	umbrella.species	umbrella.duiker.species
+African_brush_tailed_porcupine	porcupine	porcupine	porcupine
+African_civet	other (non-primate)	other (non-primate)	other (non-primate)
+African_forest_buffalo	forest buffalo	forest buffalo	forest buffalo
+African_forest_elephant	elephant	elephant	elephant
+African_palm_civet	other (non-primate)	other (non-primate)	other (non-primate)
+African_white_bellied_pangolin	pangolin	pangolin	pangolin
+Bat	other (non-primate)	other (non-primate)	other (non-primate)
+Bay_duiker	red duiker	hoofed.animal	duiker
+Bird_sp	bird	bird	bird
+Black_duiker	dark duiker	hoofed.animal	duiker
+Bongo	large ungulate	hoofed.animal	hoofed.animal
+Bourlons_genet	other (non-primate)	other (non-primate)	other (non-primate)
+Diana_monkey	other (primate)	other (primate)	other (primate)
+Duiker_sp	**any of the duiker categories?	hoofed.animal	duiker
+Gambian_mongoose	other (non-primate)	other (non-primate)	other (non-primate)
+Giant_forest_hog	giant forest hog	hog	hog
+Giant_ground_pangolin	pangolin	pangolin	pangolin
+Giant_pouched_rat	rodent	rodent	rodent
+Great_blue_turaco	bird	bird	bird
+Hornbill	bird	bird	bird
+Human	human	human	human
+Jentinks_duiker	Jentink's duiker	hoofed.animal	duiker
+King_colobus	other (primate)	other (primate)	other (primate)
+Lathams_francolin	bird	bird	bird
+Leopard	leopard	leopard	leopard
+Lesser_spot_nosed_monkey	other (primate)	other (primate)	other (primate)
+Lizard	reptile	reptile	reptile
+Lowes_monkey	other (primate)	other (primate)	other (primate)
+Marsh_mongoose	other (non-primate)	other (non-primate)	other (non-primate)
+Maxwells_duiker	small grey duiker	hoofed.animal	duiker
+NA			
+never.used	cattle	cattle	cattle
+never.used	gorilla	gorilla	gorilla
+never.used	warthog	hog	hog
+never.used	small antelope	hoofed.animal	hoofed.animal
+never.used	hyena	hyena	hyena
+never.used	lion	lion	lion
+never.used	small cat	small cat	small cat
+never.used	wild dog	wild dog	wild dog
+Nkulengu_rail	bird	bird	bird
+Ogilbys_duiker	red duiker	hoofed.animal	duiker
+Olive_colobus	other (primate)	other (primate)	other (primate)
+Olive_ibis	bird	bird	bird
+Primate_sp	other (primate)	other (primate)	other (primate)
+Pygmy_hippopotamus	hippopotamus	hippopotamus	hippopotamus
+Raptor	bird	bird	bird
+Rattel	other (non-primate)	other (non-primate)	other (non-primate)
+Red_duiker	red duiker	hoofed.animal	duiker
+Red_river_hog	red river hog	hog	hog
+Rodent_sp	rodent	rodent	rodent
+Snake	reptile	reptile	reptile
+Sooty_mangabey	other (primate)	other (primate)	other (primate)
+Squirrel	rodent	rodent	rodent
+Terrestrial_bird	bird	bird	bird
+Tortoise	reptile	reptile	reptile
+Turtle	reptile	reptile	reptile
+UID	unidentifiable	unidentifiable	unidentifiable
+Water_chevrotain	large ungulate	hoofed.animal	hoofed.animal
+Western_chimpanzee	chimpanzee	chimpanzee	chimpanzee
+Western_crested_guineafowl	bird	bird	bird
+Western_red_colobus	other (primate)	other (primate)	other (primate)
+White_breasted_guineafowl	bird	bird	bird
+White_crested_hornbill	bird	bird	bird
+Yellow_backed_duiker	dark duiker	hoofed.animal	duiker
+Zebra_duiker	zebra duiker	hoofed.animal	duiker
