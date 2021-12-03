@@ -17,6 +17,8 @@
 # Otherwise, consider only clip(s) that have the highest consensus proportion. If those remaining clips reach a consensus on different categories, the video does not reach consensus. If the remaining clips all reach consensus on the same category, then the video reaches consensus on that category. 
 # The proportion agreement for the video is the average proportion agreement of the clips that were considered for the consensus category determination.
 
+# Replace "YourPathHere" with respective file path
+
 # Note: "species" in this script is the same as a "category" mentioned in the paper
 
 #############################################
@@ -24,14 +26,14 @@
 #############################################
 
 # Bring in expert data
-# expert.data<-read.table("your path here/expert_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", header=T)
-expert.data<-read.table("D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/expert_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", header=T)
+# expert.data<-read.table("YourPathHere/expert_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", header=T)
+expert.data<-read.table("YourPathHere/expert_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", header=T)
 nrow(expert.data)
 #11896
 
 ######################## Find consensus species per clip
-# class.data<-read.table("your path here/class_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", header=T)
-class.data<-read.table("D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/class_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", header=T)
+# class.data<-read.table("YourPathHere/class_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", header=T)
+class.data<-read.table("YourPathHere/class_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", header=T)
 nrow(class.data)
 #313505
 class.data<-class.data[order(class.data$Clip.ID),]
@@ -115,12 +117,13 @@ table(summ.data$Consensus.Species)
 #          zebra duiker 
 #                   175 
 
-
-write.table(summ.data, "D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/consensus_per_clip_original_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
+# write.table(summ.data, "YourPathHere/consensus_per_clip_original_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
+	
+write.table(summ.data, "YourPathHere/consensus_per_clip_original_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
 
 
 ######################## Find consensus species per video
-clip.cons.data<-read.table("D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/consensus_per_clip_original_CandS_Species_ID_MS.txt", sep="\t", header=T, stringsAsFactor=F)
+clip.cons.data<-read.table("YourPathHere/consensus_per_clip_original_CandS_Species_ID_MS.txt", sep="\t", header=T, stringsAsFactor=F)
 nrow(clip.cons.data)
 #47584
 length(unique(clip.cons.data$Video.ID))
@@ -204,8 +207,10 @@ table(video.cons$Consensus.Type, video.cons$Expert.Species=="blank")
 video.cons<-video.cons[video.cons$Consensus.Species!="presence undetermined",]
 nrow(video.cons)
 #11894
-
-write.table(video.cons, "D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/consensus_per_video_original_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
+	
+# write.table(video.cons, "YourPathHere/consensus_per_video_original_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
+	
+write.table(video.cons, "YourPathHere/consensus_per_video_original_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
 
 
 
@@ -214,12 +219,12 @@ write.table(video.cons, "D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/c
 #############################################
 
 # Bring in expert data
-expert.data<-read.table("D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/expert_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", header=T)
+expert.data<-read.table("YourPathHere/expert_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", header=T)
 nrow(expert.data)
 #11896
 
 ######################## Find consensus species per clip
-class.data<-read.table("D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/class_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", header=T)
+class.data<-read.table("YourPathHere/class_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", header=T)
 nrow(class.data)
 #313505
 class.data<-class.data[order(class.data$Clip.ID),]
@@ -293,13 +298,13 @@ table(summ.data.umbrella.duiker$Consensus.Species)
     #            rodent             small cat 
     #               164                    10 
 
+# write.table(summ.data.umbrella.duiker, "YourPathHere/consensus_per_clip_umbrella_duiker_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
 
-
-write.table(summ.data.umbrella.duiker, "D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/consensus_per_clip_umbrella_duiker_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
+write.table(summ.data.umbrella.duiker, "YourPathHere/consensus_per_clip_umbrella_duiker_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
 
 
 ######################## Find consensus species per video
-clip.cons.data.umbrella.duiker<-read.table("D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/consensus_per_clip_umbrella_duiker_CandS_Species_ID_MS.txt", sep="\t", header=T, stringsAsFactor=F)
+clip.cons.data.umbrella.duiker<-read.table("YourPathHere/consensus_per_clip_umbrella_duiker_CandS_Species_ID_MS.txt", sep="\t", header=T, stringsAsFactor=F)
 nrow(clip.cons.data.umbrella.duiker)
 #47584
 length(unique(clip.cons.data.umbrella.duiker$Video.ID))
@@ -386,8 +391,9 @@ video.cons.umbrella.duiker<-video.cons.umbrella.duiker[video.cons.umbrella.duike
 nrow(video.cons.umbrella.duiker)
 #11894
 
+# write.table(video.cons.umbrella.duiker, "YourPathHere/consensus_per_video_umbrella_duiker_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
 
-write.table(video.cons.umbrella.duiker, "D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/consensus_per_video_umbrella_duiker_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
+write.table(video.cons.umbrella.duiker, "YourPathHere/consensus_per_video_umbrella_duiker_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
 
 
 
@@ -397,12 +403,12 @@ write.table(video.cons.umbrella.duiker, "D:/Desktop/iDiv_ChimpAndSee/Paper analy
 #############################################
 
 # Bring in expert data
-expert.data<-read.table("D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/expert_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", header=T)
+expert.data<-read.table("YourPathHere/expert_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", header=T)
 nrow(expert.data)
 #11896
 
 ######################## Find consensus species per clip
-class.data<-read.table("D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/class_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", header=T)
+class.data<-read.table("YourPathHere/class_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", header=T)
 nrow(class.data)
 #313505
 class.data<-class.data[order(class.data$Clip.ID),]
@@ -476,11 +482,13 @@ table(summ.data.umbrella$Consensus.Species)
         #     small cat 
         #             9 
 
-write.table(summ.data.umbrella, "D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/consensus_per_clip_umbrella_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
+# write.table(summ.data.umbrella, "YourPathHere/consensus_per_clip_umbrella_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
+	
+write.table(summ.data.umbrella, "YourPathHere/consensus_per_clip_umbrella_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
 
 
 ######################## Find consensus species per video
-clip.cons.data.umbrella<-read.table("D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/consensus_per_clip_umbrella_CandS_Species_ID_MS.txt", sep="\t", header=T, stringsAsFactor=F)
+clip.cons.data.umbrella<-read.table("YourPathHere/consensus_per_clip_umbrella_CandS_Species_ID_MS.txt", sep="\t", header=T, stringsAsFactor=F)
 nrow(clip.cons.data.umbrella)
 #47584
 length(unique(clip.cons.data.umbrella$Video.ID))
@@ -569,7 +577,8 @@ video.cons.umbrella<-video.cons.umbrella[video.cons.umbrella$Consensus.Species!=
 nrow(video.cons.umbrella)
 #11894
 
+# write.table(video.cons.umbrella, "YourPathHere/consensus_per_video_umbrella_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
 
-write.table(video.cons.umbrella, "D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/consensus_per_video_umbrella_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
+write.table(video.cons.umbrella, "YourPathHere/consensus_per_video_umbrella_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
 
 
