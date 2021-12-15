@@ -22,6 +22,8 @@
 #############################################
 #       Original category designation       #
 #############################################
+#strings should be read as characters by default, not factors
+options(stringsAsFactors=F)
 
 # Bring in expert data
 # expert.data<-read.table("your path here/expert_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", header=T)

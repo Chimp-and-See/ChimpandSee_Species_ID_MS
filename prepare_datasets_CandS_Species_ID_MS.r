@@ -3,6 +3,9 @@
 ######################################
 # create classification and expert datasets for analysis
 
+#strings should be read as characters by default, not factors
+options(stringsAsFactors=F)
+
 class.data<-read.table("D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/all_raw_classification_data_Species_ID_MS.txt", sep="\t", header=T)
 nrow(class.data)
 #369671
