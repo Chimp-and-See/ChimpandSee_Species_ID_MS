@@ -6,13 +6,13 @@
 #strings should be read as characters by default, not factors
 options(stringsAsFactors=F)
 
-class.data<-read.table("D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/all_raw_classification_data_Species_ID_MS.txt", sep="\t", header=T)
+class.data<-read.table("your path here/all_raw_classification_data_Species_ID_MS.txt", sep="\t", header=T)
 nrow(class.data)
 #369671
 length(unique(class.data$Video.ID))
 #13531
 
-expert.data<-read.table("D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/all_expert_data_Species_ID_MS.txt", sep="\t", header=T)
+expert.data<-read.table("your path here/all_expert_data_Species_ID_MS.txt", sep="\t", header=T)
 nrow(expert.data)
 #13814
 length(unique(expert.data$Video.ID))
@@ -350,10 +350,7 @@ nrow(expert.data)
 #remove unnecessary columns
 class.data<-class.data[,-which(colnames(class.data) %in% c("User.Clip","Classification.ID.Species"))]
 
-# write.table(class.data, "your path here/class_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
-# write.table(expert.data, "your path here/expert_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
-
-write.table(class.data, "D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/class_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
-write.table(expert.data, "D:/Desktop/iDiv_ChimpAndSee/Paper analyses/Rerun 2021/copies for github/expert_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
+write.table(class.data, "your path here/class_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
+write.table(expert.data, "your path here/expert_data_for_analysis_CandS_Species_ID_MS.txt", sep="\t", row.names=F, col.names=T)
 
 
